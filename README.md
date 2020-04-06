@@ -1,13 +1,15 @@
 ------------------------------------------------------------------------
 
-
+# 📊 PastPapersDownloader 📊
 
 ------------------------------------------------------------------------
 
 
 ## Introduction
 
-This tool was created to download Past Papers and all the associated resources in bulk. Use the command line and the `main.py` file to download the exam.s
+This program uses multithreaded requests to download Past Papers for As and A, IGCSE, and O-Level classes. It's a quick method of downloading past exams. All exams are gathered from [Papa Cambridge](https://papacambridge.com/)
+
+
 
 ------------------------------------------------------------------------
 
@@ -27,18 +29,39 @@ This tool was created to download Past Papers and all the associated resources i
 
 ## How to Install
 
-#### 1. Install directly from the github page
+#### 1. Download manually [--> here <--](https://github.com/saleguas/PastPapersDownloader/archive/master.zip)
 #### *OR*
 #### 2. Type in your terminal or cmd-line:
 ```
-git clone https://github.com/saleguas/desktoporganizer deskorg
+git clone https://github.com/saleguas/PastPapersDownloader.git
 ```
 
 ------------------------------------------------------------------------
 
 ## How to Use It
 
-If you want the help output, then here you go:
+The instructions are simple:
+1. Simply open up a terminal in the same location as the main.py file
+2. Type `python main.py [COMMANDS]` and that's all!
+
+![](media/instructions.gif)
+
+
+Use the various list commands to display the syllabus codes for the classes. For example If I wanted to download AS and A level biology, I would first run:
+
+```python
+python main.py -LA
+```
+
+to list the As and A level classes, and see that Biology has the syllabus number 9700.
+
+I would then run the following to download it:
+
+```
+python main.py -A 9700
+```
+
+The help command on the argument parser displays each command in detail:
 ```bash
 usage: main.py [-h] [-A AICE] [-O ORDINARY] [-I IGCSE] [-LA] [-LO] [-LI]
 
@@ -64,10 +87,5 @@ optional arguments:
   -LI, --LISTIGCSE      Lists all the IGCSE classes with the syllabus numbers.
 
 ```
-If that's not enough:
-1. Simply open up a terminal in the same location as the main.py file
-2. Type `python main.py [COMMANDS]` and that's all!
-
-![](media/instructions.gif)
 
 ------------------------------------------------------------------------
